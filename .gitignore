@@ -27,3 +27,6 @@ hs_err_pid*
 /.settings/
 /.project
 /.classpath
+
+# Ethereum
+/database/
