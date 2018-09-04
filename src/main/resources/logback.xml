@@ -14,6 +14,7 @@
 	</appender>
 	
 	<logger name="me.jimwayneyeh" level="ALL" />
+	<logger name="wire" level="WARN" additivity="false" />
 	
 	<root level="INFO">
 		<appender-ref ref="ASYNC" />
