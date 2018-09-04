@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Define the default standard out appender for outputing logs. -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%date{ISO8601} | %-5level | %logger{26} | %msg%n</Pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="STDOUT" />
+		<queueSize>20</queueSize>
+		<discardingThreshold>0</discardingThreshold>
+	</appender>
+	
+	<logger name="me.jimwayneyeh" level="ALL" />
+	
+	<root level="INFO">
+		<appender-ref ref="ASYNC" />
+	</root>
+</configuration>
