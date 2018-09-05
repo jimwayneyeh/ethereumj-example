@@ -14,7 +14,10 @@
 	</appender>
 	
 	<logger name="me.jimwayneyeh" level="ALL" />
+	<!-- Ignore ethereum logs for connecting. -->
 	<logger name="wire" level="WARN" additivity="false" />
+	<!-- Ignore ethereum logs of blocks. -->
+	<logger name="VM" level="WARN" additivity="false" />
 	
 	<root level="INFO">
 		<appender-ref ref="ASYNC" />
